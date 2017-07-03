@@ -103,6 +103,12 @@ Polymer element for UI Router Core
       // update which component is inside this ui-view
       var root = this;
       var componentType = (newConfig && newConfig.viewDecl.component) || this.component || "";
+      var $stateParams = newConfig.path.reduce((params, pathNode) => {
+        for (let key in pathNode.paramValues) {
+          params[key] =pathNode.paramValues[key];
+        } 
+        return params;
+      }, {});
       var child = root.firstElementChild;
       if (child !== null) {
         root.removeChild(child)
@@ -114,6 +120,7 @@ Polymer element for UI Router Core
         var promise = Promise.all(resolvables.map(resolvable => resolvable.resolveFn()));
         promise.then(results => {
           this.adoptResolveToElement(context.self.resolve, results, el);
+          el.$stateParams = $stateParams;
           root.appendChild(el);
         });
       }
