@@ -1,6 +1,7 @@
 {
   "name": "polymer-ui-router",
   "dependencies": {
-    "@uirouter/angularjs": "^1.0.4"
+    "@uirouter/angularjs": "^1.0.5",
+    "@uirouter/core": "^5.0.5"
   }
 }

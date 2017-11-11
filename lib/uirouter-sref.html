@@ -194,7 +194,12 @@ Element that generates `<a>` tag with contents.
 
       _computeLink() {
         var params = this.getParams();
-        this.generatedURL = this.uiRouter.stateService.href(this.state, params, this._assembleOptions());
+        const generatedURL = this.uiRouter.stateService.href(this.state, params, this._assembleOptions());
+        if (!generatedURL) {
+          // console.log('generatedURL missing', this.state)
+        } else {
+          this.generatedURL = generatedURL.replace(/\w+:\/\/[^\/]+/, location.origin);
+        }
       }
 
       fire(name, detail) {

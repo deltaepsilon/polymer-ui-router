@@ -2,16 +2,12 @@
 # yarn lockfile v1
 
 
-"@uirouter/core@5.0.3":
-  version "5.0.3"
-  resolved "https://npm.chrisesplin.com/@uirouter%2fcore/-/core-5.0.3.tgz#e2b5b1e45190e20c67ba4e15c013de5d4e0ccab3"
-
-angular-ui-router@^1.0.3:
-  version "1.0.3"
-  resolved "https://npm.chrisesplin.com/angular-ui-router/-/angular-ui-router-1.0.3.tgz#bf2494caae95c37cf01af3761d89747cfed2db45"
+"@uirouter/angularjs@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/@uirouter/angularjs/-/angularjs-1.0.5.tgz#ba559378ac981255f9a96212b7ef51fb82ec49b8"
   dependencies:
-    "@uirouter/core" "5.0.3"
+    "@uirouter/core" "5.0.5"
 
-ui-router@^1.0.0-alpha.3:
-  version "1.0.0-alpha.3"
-  resolved "https://npm.chrisesplin.com/ui-router/-/ui-router-1.0.0-alpha.3.tgz#b29872720228b09af55259e9418f5e14bc07d962"
+"@uirouter/core@5.0.5", "@uirouter/core@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.npmjs.org/@uirouter/core/-/core-5.0.5.tgz#4fafae8b89e1bee321b0ed32e69ab66547c055c6"
